@@ -1,0 +1,30 @@
+.main-header {
+  background-color: #007add;
+  height: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+
+  &__logo {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  &__nav-menu {
+    width: 50%;
+
+    &--list {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0;
+
+      &__item {
+        margin-left: 1.5rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+      }
+    }
+  }
+}
