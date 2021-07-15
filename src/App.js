@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import '../src/App.scss';
 import 'antd/dist/antd.css';
 import Header from './components/Header/Header';
