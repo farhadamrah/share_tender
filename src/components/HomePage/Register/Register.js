@@ -1,9 +1,9 @@
 import React from 'react';
 import { Form, Input, Button, Checkbox } from 'antd';
-import './Login.scss';
+import './Register.scss';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
+const Register = () => {
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   return (
-    <div className='login'>
+    <div className='register'>
       <Form
         name='form'
         initialValues={{
@@ -22,6 +22,8 @@ const Login = () => {
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
       >
+        <h1 className='form-title'>Qeydiyyatdan keç</h1>
+
         <Form.Item
           // label='Username'
           name='username'
@@ -37,8 +39,36 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
+          // label='Username'
+          name='email'
+          rules={[
+            {
+              required: true,
+              message: 'Please input your email!',
+            },
+          ]}
+        >
+          <label>E-poçt</label>
+          <Input />
+        </Form.Item>
+
+        <Form.Item
           // label='Password'
-          name='password'
+          name='phone'
+          rules={[
+            {
+              required: true,
+              message: 'Please input your password!',
+            },
+          ]}
+        >
+          <label>Əlaqə nömrəsi</label>
+          <Input />
+        </Form.Item>
+
+        <Form.Item
+          // label='Password'
+          name='password1'
           rules={[
             {
               required: true,
@@ -51,34 +81,34 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item
-          name='remember'
-          valuePropName='checked'
-          className='check-forget'
+          // label='Password'
+          name='password2'
+          rules={[
+            {
+              required: true,
+              message: 'Please input your password!',
+            },
+          ]}
         >
-          <Checkbox>
-            <span className='checkbox-label'>Yadda saxla</span>
-          </Checkbox>
-          <label className='forget-label'>Şifrəni unutdun?</label>
+          <label>Təkrar şifrə</label>
+          <Input.Password />
         </Form.Item>
 
         <Form.Item>
           <Button type='primary' htmlType='submit'>
-            <span className='login-label'>Daxil ol</span>
+            <span className='register-label'>Qeydiyyatdan keç</span>
           </Button>
         </Form.Item>
 
         <div className='h-line'></div>
 
-        <Form.Item className='register-btn__wrapper'>
-          <Link to='/register'>
-            <Button type='primary' className='register-btn'>
-              <span className='register-label'>Qeydiyyat</span>
-            </Button>
-          </Link>
-        </Form.Item>
+        <p className='have-account'>Hesabınız var?</p>
+        <div className='to-login'>
+          <Link to='/'>Daxil olun</Link>
+        </div>
       </Form>
     </div>
   );
 };
 
-export default Login;
+export default Register;

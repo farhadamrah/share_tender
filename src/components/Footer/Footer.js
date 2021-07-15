@@ -10,7 +10,7 @@ const Footer = () => {
           <ul className='footer__nav--list'>
             <li>Haqqımızda</li>
             <li>Əlaqə</li>
-            <li>Qaydalar</li>
+            <li>Qaydalar və şərtlər</li>
           </ul>
         </nav>
         <p className='footer__copyright'>

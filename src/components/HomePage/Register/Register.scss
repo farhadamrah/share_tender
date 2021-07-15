@@ -1,6 +1,6 @@
-.login {
+.register {
   width: 70%;
-  height: 90%;
+  //   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,21 +11,26 @@
     border-radius: 0.5rem;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.116);
 
-    .ant-form-item {
+    .form-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    &-item {
       label {
         font-size: 1.2rem;
         font-weight: 600;
         color: rgb(56, 56, 56);
       }
+
       .ant-input,
       .ant-input-password {
         border-radius: 0.2rem;
         background-color: rgb(250, 250, 250);
       }
-      .checkbox-label {
-        font-size: 1rem;
-        font-weight: 500;
-      }
+
       .ant-btn-primary {
         width: 100%;
         .login-label {
@@ -40,42 +45,37 @@
       margin-left: auto;
       margin-right: auto;
 
-      .ant-btn-primary {
+      .register-btn {
         background-color: rgb(1, 231, 51);
         border: none;
-
         .register-label {
           font-weight: 600;
           font-size: 0.9rem;
-
-          a {
-            color: white;
-          }
+        }
+        :hover {
+          background-color: rgb(7, 204, 39) !important;
         }
       }
-      :hover {
-        background-color: rgb(7, 204, 39) !important;
-      }
     }
 
-    .check-forget .ant-form-item-control-input-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      .forget-label {
-        font-size: 1rem;
-        font-weight: 400;
-        color: rgb(53, 158, 255);
-      }
+    .have-account {
+      text-align: center;
+      font-size: 0.9rem;
+      font-weight: 400;
+      margin-bottom: 0.2rem;
     }
+    .to-login {
+      text-align: center;
+      font-weight: 500;
+    }
+  }
 
-    .h-line {
-      width: 90%;
-      height: 0.07rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 1.5rem;
-      background-color: rgba(202, 202, 202, 0.767);
-    }
+  .h-line {
+    width: 90%;
+    height: 0.07rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    background-color: rgba(202, 202, 202, 0.767);
   }
 }
