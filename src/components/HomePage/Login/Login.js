@@ -62,9 +62,11 @@ const Login = () => {
         </Form.Item>
 
         <Form.Item>
-          <Button type='primary' htmlType='submit'>
-            <span className='login-label'>Daxil ol</span>
-          </Button>
+          <Link to='/tender-form'>
+            <Button type='primary' htmlType='submit'>
+              <span className='login-label'>Daxil ol</span>
+            </Button>
+          </Link>
         </Form.Item>
 
         <div className='h-line'></div>
